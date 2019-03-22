@@ -1,0 +1,54 @@
+{% extends "appone/base.html" %}
+{% load staticfiles %}
+  {% block title %}Uslugi{% endblock title %}
+
+  {% block css %}<link rel="stylesheet" href="{% static "appone/css/gotowerozwiazania.css" %}">{% endblock %}
+
+  {% block body_block %}
+    <div class="topbackground">
+      <img id="imagebackground" class="imagebackground" src="{%static "appone/images/Uslugi/probowki.jpg" %}" alt="Usługi">
+      <div id="center" class="center">Gotowe rozwiązania !</div>
+    </div>
+
+    <!-- description  -->
+    <div class="middlebackground">
+      <h4 class="middletext">Poniżej znajdziecie Państwo część z naszych autorsko opracowanych, gotowych rozwiązań do wdrożenia pod własną marką</h4>
+    </div>
+
+      <div class="productsnavbar" width="auto">
+        <ul>
+          <li class="li1"><a href="#">Syropy</a></li>
+          <li class="li2"><a href="#">Toniki</a></li>
+          <li class="li3"><a href="#">Trany</a></li>
+          <li class="li4"><a href="#">Shoty</a></li>
+          <li class="li5"><a href="#">Napoje funkcjonalne</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+
+    <div class="productsdisplay">
+    {% for context in products %}
+      <div>
+      <br>
+      {{ context.product_name }}<br>
+      <img src="{{ context.product_image.url }}" alt="product_image" height="200px"><br>
+      {{ context.product_ingredients }}<br>
+      {{ context.product_description }}<br>
+    </div>
+    {% endfor %}
+    <!-- for making longer page  -->
+    {% for context in products %}
+      <div>
+      {{ context.product_name }}<br>
+      <img src="{{ context.product_image.url }}" alt="product_image" height="200px"><br>
+      {{ context.product_ingredients }}<br>
+      {{ context.product_description }}<br>
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+
+  {% endblock %}
+
+  {% block script %}<script src="{%static "appone/js/gotowerozwiazania.js" %}"></script>{% endblock %}

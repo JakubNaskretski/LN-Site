@@ -1,0 +1,27 @@
+
+/* setting padding of left navbar content */
+/* .contentnavbarleft{
+  padding-left: 5% !important;
+} */
+
+/* setting padding of right navbar content */
+/* .contentnavbaright{
+  padding-right: 5% !important;
+} */
+
+h1, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.MainLogo img{
+  width: 13%;
+}
+
+/* .mainconteiner {
+  margin-left: 10%;
+  margin-right: 10%;
+} */

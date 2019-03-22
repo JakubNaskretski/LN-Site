@@ -1,0 +1,23 @@
+{% extends "appone/base.html" %}
+{% load staticfiles %}
+  {% block title %}Uslugi{% endblock title %}
+
+  {% block css %}<link rel="stylesheet" href="{% static "appone/css/blog.css" %}">{% endblock %}
+
+  {% block body_block %}
+    <h1>There will be blog!</h1>
+    <br>
+    <div class="">
+
+    <table>
+    <td><div class="square1"><img class="CHIA1" src="{%static "appone/images/Blog/CHIA1NOBACKGROUND.png" %}" alt="chia1"></div></td>
+
+    <td><div class="square2"><img class="CHIA2" src="{%static "appone/images/Blog/CHIASIGN.png" %}" alt="chia2"></div><div class="Text">
+      <p>Hej</p>
+    </div></td>
+
+    <td><div class="square3"><img class="CHIA3" src="{%static "appone/images/Blog/CHIA2NOBACKGROUND.png" %}" alt="chia3"></div></td>
+    </table>
+    </div>
+
+  {% endblock %}

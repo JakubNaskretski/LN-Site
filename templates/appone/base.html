@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "appone/css/maincss.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  {% block css %}{% endblock %}
+
+
+
+  <body>
+
+        <div class="text-center">
+          <div class="MainLogo">
+          <a href="{% url 'StronaGlowna' %}">
+            <img src="{%static "appone/images/LABNAT-PL-pion.png" %}" class="d-inline-block align-left" alt="Home Pages">
+          </a>
+          </div>
+        </div>
+
+          <!-- <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <ul class="navbar-nav navbar-collapse collapse font-weight-bold">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'StronaGlowna' %}">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'appone:Uslugi' %}">Usługi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'appone:GotoweRozwiazania' %}">Gotowe rozwiązania</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'appone:Blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'appone:ONas' %}">Informacje o nas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'appone:Kontakt' %}">Kontakt</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a class="nav-link" href="https://pl.linkedin.com/company/laboratoria-natury"><i class="fa fa-linkedin-square"></i></a> </li>
+                <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-instagram"></i></a> </li>
+                <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
+            </ul>
+        </nav>
+      </div> -->
+
+
+      <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            <div class="navbar-nav ml-sm-5">
+              <a class="nav-link" href="{% url 'StronaGlowna' %}">Strona główna</a>
+              <a class="nav-link" href="{% url 'appone:ONas' %}">O nas</a>
+              <a class="nav-link" href="{% url 'appone:Uslugi' %}">Usługi</a>
+              <a class="nav-link" href="{% url 'appone:GotoweRozwiazania' %}">Gotowe rozwiązania</a>
+              <!-- <a class="nav-link" href="{% url 'appone:Blog' %}">Blog</a> -->
+              <a class="nav-link" href="{% url 'appone:Kontakt' %}">Kontakt</a>
+            </div>
+
+            <!-- Navbar Right Side -->
+          <div class="navbar-nav mr-sm-5">
+            <li class="nav-item"><a class="nav-link" href="https://pl.linkedin.com/company/laboratoria-natury"><i class="fa fa-linkedin-square"></i></a> </li>
+            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-instagram"></i></a> </li>
+            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
+          </div>
+    </nav>
+  </header>
+
+    <div class="mainconteiner">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>

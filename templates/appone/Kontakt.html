@@ -1,0 +1,51 @@
+{% extends "appone/base.html" %}
+{% load staticfiles %}
+  {% block title %}Uslugi{% endblock title %}
+
+  {% block css %}<link rel="stylesheet" href="{% static "appone/css/kontakt.css" %}">{% endblock %}
+
+  {% block body_block %}
+
+  <div class="allcontent">
+  <br>
+    <h1>Pozostańmy w kontakcie !</h1>
+    <br>
+    <br>
+    <div class="LeftAlignText">
+      <h2>Nasze Biuro</h2>
+      <br>
+      <h6>Siedziba główna</h6>
+        <p>Laboratoria Natury Sp. z o.o.</p>
+        <p>ul. Zawieprzycka 8D</p>
+        <p>20-228 Lublin</p>
+        <p>Tel./fax: (+48) 81 442 50 94</p>
+        <p>email: export@ln.com.pl</p>
+        <br>
+      <h6>Warszawskie biuro handlowe</h6>
+        <p>ul. Komisji Edukacji Narodowej 95/klatka 18B/lokal nr 3</p>
+        <p>02-777 Warszawa</p>
+        <p>Tel.: (+48) 501 034 516</p>
+        <br>
+      <h6>Sprzedaż Krajowa</h6>
+        <p>Magdalena Dudzińska</p>
+        <p>email: mdudzinska@ln.com.pl</p>
+        <p>mobile: +48 507 025 196</p>
+        <br>
+      <h6>Sprzedaż Eksportowa</h6>
+        <p>Agnieszka Góral</p>
+        <p>email: agoral@ln.com.pl</p>
+        <p>mobile: +48 508 620 448</p>
+        <br>
+      <h6>Dział Zaopatrzenia</h6>
+        <p>Olga Marczuk</p>
+        <p>email: omarczuk@ln.com.pl</p>
+        <p>mobile: +48 507 025 195</p>
+        <br>
+      <h6>Finanse</h6>
+        <p>Marzena Erd</p>
+        <p>email: merd@ln.com.pl</p>
+        <p>mobile: +48 501 281 491</p>
+      <br>
+    </div>
+  </div>
+  {% endblock %}

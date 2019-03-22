@@ -1,0 +1,99 @@
+{% extends "appone/base.html" %}
+{% load staticfiles %}
+  {% block title %}Uslugi{% endblock title %}
+
+  {% block css %}<link rel="stylesheet" href="{% static "appone/css/uslugi.css" %}">{% endblock %}
+
+  {% block body_block %}
+  <div class="allcontent">
+    <p></p>
+    <h1>Usługi</h1>
+
+    <img id="phototop" src="{%static "appone/images/Uslugi/probowki.jpg" %}" alt="Usługi">
+
+    <h3>KROK PO KROKU</h3>
+    <br>
+    <p>Jako firma kontraktowa, przygotujemy produkt  dostosowany do Państwa potrzeb.
+    Nasz zespół specjalistów zagwarantuje najwyższą jakość usług.
+    Oferujemy wsparcie w pełnym zakresie, na każdym etapie produkcji: zaczynając od naszego know-how, przez przygotowania i próby produkcyjne, na gotowym produkcie kończąc.
+    </p>
+
+      <div class="row">
+        <div class="column">
+          <div class="kontener">
+            <img id="icon" src="{%static "appone/images/Uslugi/LABNAT-ikony-R&D.png" %}" alt="R&D">
+              <div class="overlay">
+                <a href="">
+                  <img id="logo" src="{%static "appone/images/Uslugi/LabNatLogo.png" %}">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="kontener">
+            <img id="icon" src="{%static "appone/images/Uslugi/LABNAT-ikony-laboratorium.png" %}"alt="Laboratorium">
+              <div class="overlay">
+                <a href="">
+                  <img id="logo" src="{%static "appone/images/Uslugi/LabNatLogo.png" %}">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="kontener">
+            <img id="icon" src="{%static "appone/images/Uslugi/LABNAT-ikony-rejestracja.png" %}" alt="Rejestracja">
+              <div class="overlay">
+                <a href="">
+                  <img id="logo" src="{%static "appone/images/Uslugi/LabNatLogo.png" %}">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="kontener">
+            <img id="icon" src="{%static "appone/images/Uslugi/LABNAT-ikony-produkcja.png" %}" alt="Produkcja">
+              <div class="overlay">
+                <a href="">
+                  <img id="logo" src="{%static "appone/images/Uslugi/LabNatLogo.png" %}">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="kontener">
+            <img id="icon" src="{%static "appone/images/Uslugi/LABNAT-ikony-logistyka.png" %}" alt="Logistyka">
+              <div class="overlay">
+                <a href="">
+                  <img id="logo" src="{%static "appone/images/Uslugi/LabNatLogo.png" %}">
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="column">
+            <h6>R&D</h6>
+            <p>formulacja, dokumentacja i analityka</p>
+          </div>
+          <div class="column">
+            <h6>Laboratorium</h6>
+            <p>dokładne i niezawodne testy laboratoryjne</p>
+          </div>
+          <div class="column">
+            <h6>Rejestracja</h6>
+            <p>rejestracja i wprowadzenie produktu na rynek</p>
+          </div>
+          <div class="column">
+            <h6>Produkcja</h6>
+            <p>usługi produkcyjne</p>
+          </div>
+          <div class="column">
+            <h6>Logistyka</h6>
+            <p>magazynowanie produktów i przygotowanie do transportu</p>
+          </div>
+      </div>
+    </div>
+
+
+  {% endblock %}
