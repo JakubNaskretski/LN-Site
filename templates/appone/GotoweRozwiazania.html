@@ -28,22 +28,23 @@
       <div class="container">
 
     <div class="productsdisplay">
-    {% for context in products %}
+      <!-- for value in key - from views  -->
+    {% for funcdrinksprod in funcdrinksprod %}
       <div>
       <br>
-      {{ context.product_name }}<br>
-      <img src="{{ context.product_image.url }}" alt="product_image" height="200px"><br>
-      {{ context.product_ingredients }}<br>
-      {{ context.product_description }}<br>
+      {{ funcdrinksprod.product_name }}<br>
+      <img src="{{ funcdrinksprod.product_image.url }}" alt="product_image" height="200px"><br>
+      {{ funcdrinksprod.product_ingredients }}<br>
+      {{ funcdrinksprod.product_description }}<br>
     </div>
     {% endfor %}
     <!-- for making longer page  -->
-    {% for context in products %}
+    {% for syrupprod in syrupprod %}
       <div>
-      {{ context.product_name }}<br>
-      <img src="{{ context.product_image.url }}" alt="product_image" height="200px"><br>
-      {{ context.product_ingredients }}<br>
-      {{ context.product_description }}<br>
+      {{ syrupprod.product_name }}<br>
+      <img src="{{ syrupprod.product_image.url }}" alt="product_image" height="200px"><br>
+      {{ syrupprod.product_ingredients }}<br>
+      {{ syrupprod.product_description }}<br>
     </div>
     {% endfor %}
     </div>

@@ -13,7 +13,7 @@ class Product(models.Model):
     product_name = models.CharField(max_length=25, unique=True)
     product_ingredients = models.CharField(max_length=250)
     product_description = models.CharField(max_length=250)
-    product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
+    product_type = models.ForeignKey(ProductType, on_delete=models.DO_NOTHING)
     product_image = models.ImageField(upload_to='products')
 
     def __str__(self):
