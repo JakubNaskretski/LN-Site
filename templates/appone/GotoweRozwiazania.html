@@ -17,11 +17,11 @@
 
       <div class="productsnavbar" width="auto">
         <ul>
-          <li class="li1"><a href="#">Syropy</a></li>
-          <li class="li2"><a href="#">Toniki</a></li>
-          <li class="li3"><a href="#">Trany</a></li>
-          <li class="li4"><a href="#">Shoty</a></li>
-          <li class="li5"><a href="#">Napoje funkcjonalne</a></li>
+          <li class="li1"><button id="btn1" type="button" name="btn1">Syropy</button></li>
+          <li class="li2"><button type="button" name="btn2">Toniki</button></li>
+          <li class="li3"><button type="button" name="btn3">Trany</button></li>
+          <li class="li4"><button type="button" name="btn4">Shoty</button></li>
+          <li class="li5"><button type="button" name="btn5">Napoje funkcjonalne</button></li>
         </ul>
       </div>
 
@@ -39,14 +39,16 @@
     </div>
     {% endfor %}
     <!-- for making longer page  -->
-    {% for syrupprod in syrupprod %}
-      <div>
-      {{ syrupprod.product_name }}<br>
-      <img src="{{ syrupprod.product_image.url }}" alt="product_image" height="200px"><br>
-      {{ syrupprod.product_ingredients }}<br>
-      {{ syrupprod.product_description }}<br>
+    <div class="syrups">
+      {% for syrupprod in syrupprod %}
+        <div>
+        {{ syrupprod.product_name }}<br>
+        <img src="{{ syrupprod.product_image.url }}" alt="product_image" height="200px"><br>
+        {{ syrupprod.product_ingredients }}<br>
+        {{ syrupprod.product_description }}<br>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
     </div>
     </div>
 
