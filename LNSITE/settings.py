@@ -26,7 +26,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'products')
 SECRET_KEY = ')8s=@r^h136%fy#r8l@40agj1a!o9mt_0zl++89r2t_wq2-w7&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['192.168.1.24', '127.0.0.1', '192.168.1.22', '192.168.3.73']
 
