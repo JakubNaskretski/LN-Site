@@ -5,10 +5,12 @@
   {% block css %}<link rel="stylesheet" href="{% static "appone/css/gotowerozwiazania.css" %}">{% endblock %}
 
   {% block body_block %}
+  <div class="topbackgroundwrap">
     <div class="topbackground">
       <img id="imagebackground" class="imagebackground" src="{%static "appone/images/Uslugi/probowki.jpg" %}" alt="Usługi">
       <div id="center" class="center">Gotowe rozwiązania !</div>
     </div>
+  </div>
 
     <!-- description  -->
     <div class="middlebackground">
@@ -17,29 +19,31 @@
 
       <div class="productsnavbar" width="auto">
         <ul>
-          <li class="li1"><button id="btn1" type="button" name="btn1">Syropy</button></li>
-          <li class="li2"><button type="button" name="btn2">Toniki</button></li>
-          <li class="li3"><button type="button" name="btn3">Trany</button></li>
-          <li class="li4"><button type="button" name="btn4">Shoty</button></li>
-          <li class="li5"><button type="button" name="btn5">Napoje funkcjonalne</button></li>
+          <li class="li1"><button onclick="chengeElement(0)" data-btn="0">Syropy</button></li>
+          <li class="li2"><button onclick="changeElement(1)" data-btn="1">Toniki</button></li>
+          <li class="li3"><button onclick="changeElement(2)" data-btn="2">Trany</button></li>
+          <li class="li4"><button onclick="changeElement(3)" data-btn="3">Shoty</button></li>
+          <li class="li5"><button onclick="changeElement(4)" data-btn="4">Napoje funkcjonalne</button></li>
         </ul>
       </div>
 
-      <div class="container">
+    <div class="content">
 
     <div class="productsdisplay">
       <!-- for value in key - from views  -->
-    {% for funcdrinksprod in funcdrinksprod %}
-      <div>
-      <br>
-      {{ funcdrinksprod.product_name }}<br>
-      <img src="{{ funcdrinksprod.product_image.url }}" alt="product_image" height="200px"><br>
-      {{ funcdrinksprod.product_ingredients }}<br>
-      {{ funcdrinksprod.product_description }}<br>
-    </div>
-    {% endfor %}
+        <div id="funcdrinksdisplay" class="content__text" data-id="4">
+        {% for funcdrinksprod in funcdrinksprod %}
+            <div>
+            <br>
+            {{ funcdrinksprod.product_name }}<br>
+            <img src="{{ funcdrinksprod.product_image.url }}" alt="product_image" height="200px"><br>
+            {{ funcdrinksprod.product_ingredients }}<br>
+            {{ funcdrinksprod.product_description }}<br>
+          </div>
+        {% endfor %}
+        </div>
     <!-- for making longer page  -->
-    <div class="syrups">
+    <div id="syrupsdisplay" class="content__text" data-id="0">
       {% for syrupprod in syrupprod %}
         <div>
         {{ syrupprod.product_name }}<br>
@@ -49,6 +53,11 @@
       </div>
       {% endfor %}
     </div>
+
+    <p class="content__text" data-id="1"> Toniki </p>
+    <p class="content__text" data-id="2"> Trany </p>
+    <p class="content__text" data-id="3"> Shoty </p>
+
     </div>
     </div>
 

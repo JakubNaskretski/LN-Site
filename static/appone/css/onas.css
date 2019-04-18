@@ -1,18 +1,26 @@
-body {
+/* body {
+  height: 1250px;
+  overflow: auto; /* Hide overflow */
+
+
+.background {
   background-image: url("/static/appone/images/onas/LeavesWater.jpg");
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: center;
-  margin-left: auto;
 }
 
 .TextSquare{
   border-radius: 25px;
   background-color: rgba(246, 245, 245, 0.9);
-  padding: 20px;
-  margin: 10% 20%;
-
+  padding: 10px 20px 0px 20px;
+  margin: 8% 20% 3% 20%;
 }
+
+h1 {
+  color: #333;
+}
+
 p {
   text-align: left;
   padding-left: 200px;

@@ -1,27 +1,61 @@
-
-/* setting padding of left navbar content */
-/* .contentnavbarleft{
-  padding-left: 5% !important;
-} */
-
-/* setting padding of right navbar content */
-/* .contentnavbaright{
-  padding-right: 5% !important;
-} */
-
 h1, h3, h4, h5, h6 {
-  text-align: center;
+  text-align: center; /* center all headers */
+  color: #333; /* add color to all headers */
 }
 
 p {
-  text-align: center;
+  text-align: center; /* align all paragraphs */
+  color: #333; /* add color to all paragraphs */
 }
 
-.MainLogo img{
-  width: 13%;
+.MainLogo img {
+  width: 13%; /* add width of the logo */
+  margin-top: 15px; /* add some margin */
+  margin-bottom: 15px; /* add some margin */
 }
 
-/* .mainconteiner {
-  margin-left: 10%;
-  margin-right: 10%;
-} */
+.mainnavbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: rgba(243, 243, 249,0.9); /* Dark background color */
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 20px; /* add rounded corners */
+  transition: 0.4s;
+}
+
+/* Style the navigation bar links */
+.mainnavbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: black; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.mainnavbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.mainnavbar a:hover {
+  background-color: #00A19A; /* add color to the button on hover */
+  border-radius: 20px; /* radius fo buttons */
+  color: white; /*  text color */
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: sticky; 
+  top: 0;
+}
+
+.stickyright {
+  float: right; /* Float a link to the right */
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}

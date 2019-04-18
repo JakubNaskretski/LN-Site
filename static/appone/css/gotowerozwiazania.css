@@ -1,5 +1,11 @@
+.topbackgroundwrap {
+  width: 100%;
+  height: 100%;
+}
+
 .topbackground {
   position: relative;
+
 }
 
 .center {
@@ -139,6 +145,10 @@ li button:focus{
   text-align: center;
 }
 
-.syrups{
+.syrupsdisplay{
+  display: none;
+}
+
+.funcdrinksdisplay{
   display: none;
 }
