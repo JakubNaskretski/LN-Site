@@ -1,0 +1,154 @@
+.topbackgroundwrap {
+  width: 100%;
+  height: 100%;
+}
+
+.topbackground {
+  position: relative;
+
+}
+
+.center {
+  position: absolute;
+  font-size: 90px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.imagebackground{
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+
+.middlebackground {
+  background-color: rgba(243, 243, 249,0.6);
+  width: auto;
+  height: 180px;
+  border-top: black solid 1px;
+}
+
+.middletext {
+  position: relative;
+  padding: 25% 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.productsnavbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom-left-radius: 280px 120px;
+  border-bottom-right-radius: 280px 120px;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  border-bottom: black solid 1px;
+  padding: auto;
+  background-color: rgba(243, 243, 249,0.6);
+}
+
+li {
+  display: inline;
+}
+
+button{
+  background:none;
+  color:inherit;
+  border:none;
+  padding:0;
+  font: inherit;
+  /*border is optional*/
+  /* border:1px solid #444; */
+  cursor: pointer;
+}
+
+li button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 14px 20px;
+  color: black;
+  transition: 0.5s;
+}
+
+button:hover{
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+
+li button:hover {
+  position: relative;
+  transform: scale(1.2);
+  border-radius: 25px;
+}
+
+li button:focus{
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.li1 button:hover {
+  background-color: rgba(250, 140, 140, 0.6);
+}
+
+.li1 button:focus{
+ background-color: rgba(250, 140, 140, 0.6);
+}
+
+.li2 button:hover {
+  background-color: rgba(57, 163, 219, 0.6);
+}
+
+.li2 button:focus {
+  background-color: rgba(57, 163, 219, 0.6);
+}
+
+.li3 button:hover {
+  background-color: rgba(89, 198, 56, 0.6);
+}
+
+.li3 button:focus {
+  background-color: rgba(89, 198, 56, 0.6);
+}
+
+.li4 button:hover {
+  background-color: rgba(226, 145, 62, 0.6);
+}
+
+.li4 button:focus {
+  background-color: rgba(226, 145, 62, 0.6);
+}
+
+.li5 button:hover {
+  background-color: rgba(149, 157, 247, 0.6);
+}
+
+.li5 button:focus {
+  background-color: rgba(149, 157, 247, 0.6);
+}
+
+.productsdisplay{
+  text-align: center;
+}
+
+/* #syrupsdisplay{
+  display: none;
+}
+
+#funcdrinksdisplay{
+  display: none;
+} */
