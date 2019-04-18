@@ -18,11 +18,15 @@ from appone import views
 from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import RedirectView
+
+# favicon_view = RedirectView.as_view(url='/static/appone/favicon.ico', permanent=True)
 
 urlpatterns = [
     re_path(r'^$', views.StronaGlowna, name='StronaGlowna'),
     path('admin/', admin.site.urls),
     path('appone/',include('appone.urls')),
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'favicon.ico'))
 
 ]
 

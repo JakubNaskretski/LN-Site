@@ -1,1 +1,1 @@
-web: gunicorn LNSITE.wsgi --log-file -
+web: gunicorn LNSITE.wsgi
