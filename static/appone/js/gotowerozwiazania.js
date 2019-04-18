@@ -69,6 +69,7 @@
 //   );
 // }
 
+// rozwiązanie Macieja
 const contentList = document.querySelectorAll('.content__text');
 
 function hideElements() {
