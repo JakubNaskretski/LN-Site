@@ -15,9 +15,11 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'products')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# from internet static root sol
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_APPONE = os.path.join(STATIC_ROOT, 'appone')
 
 
@@ -28,7 +30,7 @@ STATIC_APPONE = os.path.join(STATIC_ROOT, 'appone')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'ln-site.herokuapp.com', '127.0.0.1:8000', '127.0.0.1', '[::1]', 'https://ln-site.herokuapp.com/']
 
@@ -124,7 +126,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [STATIC_ROOT,]
+STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_URL = '/products/'
 django_heroku.settings(locals())
